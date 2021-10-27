@@ -9,7 +9,6 @@ df_flight_paths.head()
 
 fig = go.Figure()
 
-print(df_airports['long'])
 fig.add_trace(go.Scattergeo(
     lon=df_airports['long'],
     lat=df_airports['lat'],
