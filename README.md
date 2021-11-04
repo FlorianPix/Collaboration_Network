@@ -7,3 +7,4 @@ Build a network of co-occurring cities in publication affiliations. Visualise th
 * Are different departments for university considered as different affiliations?
 * Is it crucial to have great performance?
 * Is the "Place of Publication" relevant? Or should the place be extracted from affiliations?
+* How to fetch **all** papers from PubMed at once?
