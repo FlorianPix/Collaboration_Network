@@ -18,7 +18,7 @@ def save_papers(filename, max_number, search_term="[AD]"):
     papers = get_papers(search_term, max_number)
     with open(f'saved_papers/{filename}', 'wb') as outp:
         pickle.dump(papers, outp, pickle.HIGHEST_PROTOCOL)
-        print(f'saved papers in saved_papers/{filename}')
+        print(f'saved {len(papers)} papers in saved_papers/{filename}')
 
 if __name__ == '__main__':
     save_papers('papers.pkl', 100000)
