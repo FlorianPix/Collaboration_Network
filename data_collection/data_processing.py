@@ -72,9 +72,23 @@ def get_paper_objects() -> list[Paper]:
         result.append(paper_obj)
     return result
 
-def main():
+def get_all_affiliations() -> list[Affiliation]:
     papers = get_paper_objects();
-    pprint(papers)
+    affiliations = [a for paper in papers for a in paper.affiliations]
+    return affiliations
+
+def print_all_cities(affiliations: list[Affiliation]):
+    pprint(list(map(lambda a: a.city, affiliations)))
+
+def print_country_statistics(affiliations: list[Affiliation]):
+    count_per_country: dict[str, int] = {}
+    for a in affiliations:
+        count_per_country[a.country] = count_per_country.get(a.country, 0) + 1
+    pprint(count_per_country)
+    
+
 
 if __name__ == '__main__':
-    main()
+    # print_all_cities()
+    # print_country_statistics(get_all_affiliations())
+    pass
