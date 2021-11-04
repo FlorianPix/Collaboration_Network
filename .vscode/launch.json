@@ -1,0 +1,32 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "data collection",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/data_collection/data_collection.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/data_collection/.venv"
+        },
+        {
+            "name": "data processing",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/data_collection/data_processing.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/data_collection/.venv"
+        },
+        {
+            "name": "vis",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/vis/vis.py",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/vis/.venv"
+        },
+    ]
+}
