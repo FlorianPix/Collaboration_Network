@@ -1,252 +1,1000 @@
-[
-  "Afghanistan",
-  "Åland Islands",
-  "Albania",
-  "Algeria",
-  "American Samoa",
-  "Andorra",
-  "Angola",
-  "Anguilla",
-  "Antarctica",
-  "Antigua and Barbuda",
-  "Argentina",
-  "Armenia",
-  "Aruba",
-  "Australia",
-  "Austria",
-  "Azerbaijan",
-  "Bahamas",
-  "Bahrain",
-  "Bangladesh",
-  "Barbados",
-  "Belarus",
-  "Belgium",
-  "Belize",
-  "Benin",
-  "Bermuda",
-  "Bhutan",
-  "Bolivia",
-  "Bonaire, Sint Eustatius and Saba",
-  "Bosnia and Herzegovina",
-  "Botswana",
-  "Bouvet Island",
-  "Brazil",
-  "British Indian Ocean Territory",
-  "United States Minor Outlying Islands",
-  "Virgin Islands (British)",
-  "Virgin Islands (U.S.)",
-  "Brunei Darussalam",
-  "Bulgaria",
-  "Burkina Faso",
-  "Burundi",
-  "Cambodia",
-  "Cameroon",
-  "Canada",
-  "Cabo Verde",
-  "Cayman Islands",
-  "Central African Republic",
-  "Chad",
-  "Chile",
-  "China",
-  "Christmas Island",
-  "Cocos (Keeling) Islands",
-  "Colombia",
-  "Comoros",
-  "Congo",
-  "Congo (Democratic Republic of the)",
-  "Cook Islands",
-  "Costa Rica",
-  "Croatia",
-  "Cuba",
-  "Curaçao",
-  "Cyprus",
-  "Czech Republic",
-  "Denmark",
-  "Djibouti",
-  "Dominica",
-  "Dominican Republic",
-  "Ecuador",
-  "Egypt",
-  "El Salvador",
-  "Equatorial Guinea",
-  "Eritrea",
-  "Estonia",
-  "Ethiopia",
-  "Falkland Islands (Malvinas)",
-  "Faroe Islands",
-  "Fiji",
-  "Finland",
-  "France",
-  "French Guiana",
-  "French Polynesia",
-  "French Southern Territories",
-  "Gabon",
-  "Gambia",
-  "Georgia",
-  "Germany",
-  "Ghana",
-  "Gibraltar",
-  "Greece",
-  "Greenland",
-  "Grenada",
-  "Guadeloupe",
-  "Guam",
-  "Guatemala",
-  "Guernsey",
-  "Guinea",
-  "Guinea-Bissau",
-  "Guyana",
-  "Haiti",
-  "Heard Island and McDonald Islands",
-  "Holy See",
-  "Honduras",
-  "Hong Kong",
-  "Hungary",
-  "Iceland",
-  "India",
-  "Indonesia",
-  "Côte d'Ivoire",
-  "Iran (Islamic Republic of)",
-  "Iraq",
-  "Ireland",
-  "Isle of Man",
-  "Israel",
-  "Italy",
-  "Jamaica",
-  "Japan",
-  "Jersey",
-  "Jordan",
-  "Kazakhstan",
-  "Kenya",
-  "Kiribati",
-  "Kuwait",
-  "Kyrgyzstan",
-  "Lao People's Democratic Republic",
-  "Latvia",
-  "Lebanon",
-  "Lesotho",
-  "Liberia",
-  "Libya",
-  "Liechtenstein",
-  "Lithuania",
-  "Luxembourg",
-  "Macao",
-  "Macedonia (the former Yugoslav Republic of)",
-  "Madagascar",
-  "Malawi",
-  "Malaysia",
-  "Maldives",
-  "Mali",
-  "Malta",
-  "Marshall Islands",
-  "Martinique",
-  "Mauritania",
-  "Mauritius",
-  "Mayotte",
-  "Mexico",
-  "Micronesia (Federated States of)",
-  "Moldova (Republic of)",
-  "Monaco",
-  "Mongolia",
-  "Montenegro",
-  "Montserrat",
-  "Morocco",
-  "Mozambique",
-  "Myanmar",
-  "Namibia",
-  "Nauru",
-  "Nepal",
-  "Netherlands",
-  "New Caledonia",
-  "New Zealand",
-  "Nicaragua",
-  "Niger",
-  "Nigeria",
-  "Niue",
-  "Norfolk Island",
-  "Korea (Democratic People's Republic of)",
-  "Northern Mariana Islands",
-  "Norway",
-  "Oman",
-  "Pakistan",
-  "Palau",
-  "Palestine, State of",
-  "Panama",
-  "Papua New Guinea",
-  "Paraguay",
-  "Peru",
-  "Philippines",
-  "Pitcairn",
-  "Poland",
-  "Portugal",
-  "Puerto Rico",
-  "Qatar",
-  "Republic of Kosovo",
-  "Réunion",
-  "Romania",
-  "Russian Federation",
-  "Rwanda",
-  "Saint Barthélemy",
-  "Saint Helena, Ascension and Tristan da Cunha",
-  "Saint Kitts and Nevis",
-  "Saint Lucia",
-  "Saint Martin (French part)",
-  "Saint Pierre and Miquelon",
-  "Saint Vincent and the Grenadines",
-  "Samoa",
-  "San Marino",
-  "Sao Tome and Principe",
-  "Saudi Arabia",
-  "Senegal",
-  "Serbia",
-  "Seychelles",
-  "Sierra Leone",
-  "Singapore",
-  "Sint Maarten (Dutch part)",
-  "Slovakia",
-  "Slovenia",
-  "Solomon Islands",
-  "Somalia",
-  "South Africa",
-  "South Georgia and the South Sandwich Islands",
-  "Korea (Republic of)",
-  "South Sudan",
-  "Spain",
-  "Sri Lanka",
-  "Sudan",
-  "Suriname",
-  "Svalbard and Jan Mayen",
-  "Swaziland",
-  "Sweden",
-  "Switzerland",
-  "Syrian Arab Republic",
-  "Taiwan",
-  "Tajikistan",
-  "Tanzania, United Republic of",
-  "Thailand",
-  "Timor-Leste",
-  "Togo",
-  "Tokelau",
-  "Tonga",
-  "Trinidad and Tobago",
-  "Tunisia",
-  "Turkey",
-  "Turkmenistan",
-  "Turks and Caicos Islands",
-  "Tuvalu",
-  "Uganda",
-  "Ukraine",
-  "United Arab Emirates",
-  "United Kingdom of Great Britain and Northern Ireland",
-  "United States of America",
-  "Uruguay",
-  "Uzbekistan",
-  "Vanuatu",
-  "Venezuela (Bolivarian Republic of)",
-  "Viet Nam",
-  "Wallis and Futuna",
-  "Western Sahara",
-  "Yemen",
-  "Zambia",
-  "Zimbabwe"
-]
+{
+  "Afghanistan": {
+    "alt": [],
+    "code": []
+  },
+  "Albania": {
+    "alt": [],
+    "code": []
+  },
+  "Algeria": {
+    "alt": [],
+    "code": []
+  },
+  "American Samoa": {
+    "alt": [],
+    "code": []
+  },
+  "Andorra": {
+    "alt": [],
+    "code": []
+  },
+  "Angola": {
+    "alt": [],
+    "code": []
+  },
+  "Anguilla": {
+    "alt": [],
+    "code": []
+  },
+  "Antarctica": {
+    "alt": [],
+    "code": []
+  },
+  "Antigua and Barbuda": {
+    "alt": [],
+    "code": []
+  },
+  "Argentina": {
+    "alt": [],
+    "code": []
+  },
+  "Armenia": {
+    "alt": [],
+    "code": []
+  },
+  "Aruba": {
+    "alt": [],
+    "code": []
+  },
+  "Australia": {
+    "alt": [],
+    "code": []
+  },
+  "Austria": {
+    "alt": [],
+    "code": []
+  },
+  "Azerbaijan": {
+    "alt": [],
+    "code": []
+  },
+  "Bahamas": {
+    "alt": [],
+    "code": []
+  },
+  "Bahrain": {
+    "alt": [],
+    "code": []
+  },
+  "Bangladesh": {
+    "alt": [],
+    "code": []
+  },
+  "Barbados": {
+    "alt": [],
+    "code": []
+  },
+  "Belarus": {
+    "alt": [],
+    "code": []
+  },
+  "Belgium": {
+    "alt": [],
+    "code": []
+  },
+  "Belize": {
+    "alt": [],
+    "code": []
+  },
+  "Benin": {
+    "alt": [],
+    "code": []
+  },
+  "Bermuda": {
+    "alt": [],
+    "code": []
+  },
+  "Bhutan": {
+    "alt": [],
+    "code": []
+  },
+  "Bolivia": {
+    "alt": [],
+    "code": []
+  },
+  "Bosnia and Herzegovina": {
+    "alt": [],
+    "code": []
+  },
+  "Botswana": {
+    "alt": [],
+    "code": []
+  },
+  "Bouvet Island": {
+    "alt": [],
+    "code": []
+  },
+  "Brazil": {
+    "alt": ["Brasilien"],
+    "code": []
+  },
+  "British Indian Ocean Territory": {
+    "alt": [],
+    "code": []
+  },
+  "Brunei": {
+    "alt": [],
+    "code": []
+  },
+  "Bulgaria": {
+    "alt": [],
+    "code": []
+  },
+  "Burkina Faso": {
+    "alt": [],
+    "code": []
+  },
+  "Burundi": {
+    "alt": [],
+    "code": []
+  },
+  "Cambodia": {
+    "alt": [],
+    "code": []
+  },
+  "Cameroon": {
+    "alt": [],
+    "code": []
+  },
+  "Canada": {
+    "alt": [],
+    "code": []
+  },
+  "Cape Verde": {
+    "alt": [],
+    "code": []
+  },
+  "Cayman Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Central African Republic": {
+    "alt": [],
+    "code": []
+  },
+  "Chad": {
+    "alt": [],
+    "code": []
+  },
+  "Chile": {
+    "alt": [],
+    "code": []
+  },
+  "China": {
+    "alt": ["P.R. China", "P. R. China"],
+    "code": []
+  },
+  "Christmas Island": {
+    "alt": [],
+    "code": []
+  },
+  "Cocos (Keeling) Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Colombia": {
+    "alt": [],
+    "code": []
+  },
+  "Comoros": {
+    "alt": [],
+    "code": []
+  },
+  "Congo": {
+    "alt": [],
+    "code": []
+  },
+  "The Democratic Republic of Congo": {
+    "alt": [],
+    "code": []
+  },
+  "Cook Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Costa Rica": {
+    "alt": [],
+    "code": []
+  },
+  "Ivory Coast": {
+    "alt": [],
+    "code": []
+  },
+  "Croatia": {
+    "alt": [],
+    "code": []
+  },
+  "Cuba": {
+    "alt": [],
+    "code": []
+  },
+  "Cyprus": {
+    "alt": [],
+    "code": []
+  },
+  "Czech Republic": {
+    "alt": [],
+    "code": []
+  },
+  "Denmark": {
+    "alt": [],
+    "code": []
+  },
+  "Djibouti": {
+    "alt": [],
+    "code": []
+  },
+  "Dominica": {
+    "alt": [],
+    "code": []
+  },
+  "Dominican Republic": {
+    "alt": [],
+    "code": []
+  },
+  "East Timor": {
+    "alt": [],
+    "code": []
+  },
+  "Ecuador": {
+    "alt": [],
+    "code": []
+  },
+  "Egypt": {
+    "alt": [],
+    "code": []
+  },
+  "England": {
+    "alt": [],
+    "code": []
+  },
+  "El Salvador": {
+    "alt": [],
+    "code": []
+  },
+  "Equatorial Guinea": {
+    "alt": [],
+    "code": []
+  },
+  "Eritrea": {
+    "alt": [],
+    "code": []
+  },
+  "Estonia": {
+    "alt": [],
+    "code": []
+  },
+  "Ethiopia": {
+    "alt": [],
+    "code": []
+  },
+  "Falkland Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Faroe Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Fiji Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Finland": {
+    "alt": [],
+    "code": []
+  },
+  "France": {
+    "alt": [],
+    "code": []
+  },
+  "French Guiana": {
+    "alt": [],
+    "code": []
+  },
+  "French Polynesia": {
+    "alt": [],
+    "code": []
+  },
+  "French Southern territories": {
+    "alt": [],
+    "code": []
+  },
+  "Gabon": {
+    "alt": [],
+    "code": []
+  },
+  "Gambia": {
+    "alt": [],
+    "code": []
+  },
+  "Georgia": {
+    "alt": [],
+    "code": []
+  },
+  "Germany": {
+    "alt": [],
+    "code": []
+  },
+  "Ghana": {
+    "alt": [],
+    "code": []
+  },
+  "Gibraltar": {
+    "alt": [],
+    "code": []
+  },
+  "Greece": {
+    "alt": [],
+    "code": []
+  },
+  "Greenland": {
+    "alt": [],
+    "code": []
+  },
+  "Grenada": {
+    "alt": [],
+    "code": []
+  },
+  "Guadeloupe": {
+    "alt": [],
+    "code": []
+  },
+  "Guam": {
+    "alt": [],
+    "code": []
+  },
+  "Guatemala": {
+    "alt": [],
+    "code": []
+  },
+  "Guernsey": {
+    "alt": [],
+    "code": []
+  },
+  "Guinea": {
+    "alt": [],
+    "code": []
+  },
+  "Guinea-Bissau": {
+    "alt": [],
+    "code": []
+  },
+  "Guyana": {
+    "alt": [],
+    "code": []
+  },
+  "Haiti": {
+    "alt": [],
+    "code": []
+  },
+  "Heard Island and McDonald Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Holy See (Vatican City State)": {
+    "alt": [],
+    "code": []
+  },
+  "Honduras": {
+    "alt": [],
+    "code": []
+  },
+  "Hong Kong": {
+    "alt": [],
+    "code": []
+  },
+  "Hungary": {
+    "alt": [],
+    "code": []
+  },
+  "Iceland": {
+    "alt": [],
+    "code": []
+  },
+  "India": {
+    "alt": [],
+    "code": []
+  },
+  "Indonesia": {
+    "alt": [],
+    "code": []
+  },
+  "Iran": {
+    "alt": [],
+    "code": []
+  },
+  "Iraq": {
+    "alt": [],
+    "code": []
+  },
+  "Ireland": {
+    "alt": [],
+    "code": []
+  },
+  "Israel": {
+    "alt": [],
+    "code": []
+  },
+  "Isle of Man": {
+    "alt": [],
+    "code": []
+  },
+  "Italy": {
+    "alt": [],
+    "code": []
+  },
+  "Jamaica": {
+    "alt": [],
+    "code": []
+  },
+  "Japan": {
+    "alt": [],
+    "code": []
+  },
+  "Jersey": {
+    "alt": [],
+    "code": []
+  },
+  "Jordan": {
+    "alt": [],
+    "code": []
+  },
+  "Kazakhstan": {
+    "alt": [],
+    "code": []
+  },
+  "Kenya": {
+    "alt": [],
+    "code": []
+  },
+  "Kiribati": {
+    "alt": [],
+    "code": []
+  },
+  "Kuwait": {
+    "alt": [],
+    "code": []
+  },
+  "Kyrgyzstan": {
+    "alt": [],
+    "code": []
+  },
+  "Laos": {
+    "alt": [],
+    "code": []
+  },
+  "Latvia": {
+    "alt": [],
+    "code": []
+  },
+  "Lebanon": {
+    "alt": [],
+    "code": []
+  },
+  "Lesotho": {
+    "alt": [],
+    "code": []
+  },
+  "Liberia": {
+    "alt": [],
+    "code": []
+  },
+  "Libyan Arab Jamahiriya": {
+    "alt": [],
+    "code": []
+  },
+  "Liechtenstein": {
+    "alt": [],
+    "code": []
+  },
+  "Lithuania": {
+    "alt": [],
+    "code": []
+  },
+  "Luxembourg": {
+    "alt": [],
+    "code": []
+  },
+  "Macao": {
+    "alt": [],
+    "code": []
+  },
+  "North Macedonia": {
+    "alt": [],
+    "code": []
+  },
+  "Madagascar": {
+    "alt": [],
+    "code": []
+  },
+  "Malawi": {
+    "alt": [],
+    "code": []
+  },
+  "Malaysia": {
+    "alt": [],
+    "code": []
+  },
+  "Maldives": {
+    "alt": [],
+    "code": []
+  },
+  "Mali": {
+    "alt": [],
+    "code": []
+  },
+  "Malta": {
+    "alt": [],
+    "code": []
+  },
+  "Marshall Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Martinique": {
+    "alt": [],
+    "code": []
+  },
+  "Mauritania": {
+    "alt": [],
+    "code": []
+  },
+  "Mauritius": {
+    "alt": [],
+    "code": []
+  },
+  "Mayotte": {
+    "alt": [],
+    "code": []
+  },
+  "Mexico": {
+    "alt": [],
+    "code": []
+  },
+  "Micronesia, Federated States of": {
+    "alt": [],
+    "code": []
+  },
+  "Moldova": {
+    "alt": [],
+    "code": ["MD"]
+  },
+  "Monaco": {
+    "alt": [],
+    "code": []
+  },
+  "Mongolia": {
+    "alt": [],
+    "code": []
+  },
+  "Montserrat": {
+    "alt": [],
+    "code": []
+  },
+  "Montenegro": {
+    "alt": [],
+    "code": []
+  },
+  "Morocco": {
+    "alt": [],
+    "code": []
+  },
+  "Mozambique": {
+    "alt": [],
+    "code": []
+  },
+  "Myanmar": {
+    "alt": [],
+    "code": []
+  },
+  "Namibia": {
+    "alt": [],
+    "code": []
+  },
+  "Nauru": {
+    "alt": [],
+    "code": []
+  },
+  "Nepal": {
+    "alt": [],
+    "code": ["NP"]
+  },
+  "Netherlands": {
+    "alt": [
+      "The Netherlands"
+    ],
+    "code": []
+  },
+  "Netherlands Antilles": {
+    "alt": [],
+    "code": []
+  },
+  "New Caledonia": {
+    "alt": [],
+    "code": []
+  },
+  "New Zealand": {
+    "alt": [],
+    "code": []
+  },
+  "Nicaragua": {
+    "alt": [],
+    "code": []
+  },
+  "Niger": {
+    "alt": [],
+    "code": []
+  },
+  "Nigeria": {
+    "alt": [],
+    "code": []
+  },
+  "Niue": {
+    "alt": [],
+    "code": []
+  },
+  "Norfolk Island": {
+    "alt": [],
+    "code": []
+  },
+  "North Korea": {
+    "alt": [],
+    "code": []
+  },
+  "Northern Ireland": {
+    "alt": [],
+    "code": []
+  },
+  "Northern Mariana Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Norway": {
+    "alt": [],
+    "code": []
+  },
+  "Oman": {
+    "alt": [],
+    "code": []
+  },
+  "Pakistan": {
+    "alt": [],
+    "code": []
+  },
+  "Palau": {
+    "alt": [],
+    "code": []
+  },
+  "Palestine": {
+    "alt": [],
+    "code": []
+  },
+  "Panama": {
+    "alt": [],
+    "code": ["PA"]
+  },
+  "Papua New Guinea": {
+    "alt": [],
+    "code": []
+  },
+  "Paraguay": {
+    "alt": [],
+    "code": []
+  },
+  "Peru": {
+    "alt": [],
+    "code": []
+  },
+  "Philippines": {
+    "alt": [],
+    "code": []
+  },
+  "Pitcairn": {
+    "alt": [],
+    "code": []
+  },
+  "Poland": {
+    "alt": [],
+    "code": []
+  },
+  "Portugal": {
+    "alt": [],
+    "code": []
+  },
+  "Puerto Rico": {
+    "alt": [],
+    "code": []
+  },
+  "Qatar": {
+    "alt": [],
+    "code": []
+  },
+  "Reunion": {
+    "alt": [],
+    "code": []
+  },
+  "Romania": {
+    "alt": [],
+    "code": []
+  },
+  "Russian Federation": {
+    "alt": [],
+    "code": []
+  },
+  "Rwanda": {
+    "alt": [],
+    "code": []
+  },
+  "Saint Helena": {
+    "alt": [],
+    "code": []
+  },
+  "Saint Kitts and Nevis": {
+    "alt": [],
+    "code": []
+  },
+  "Saint Lucia": {
+    "alt": [],
+    "code": []
+  },
+  "Saint Pierre and Miquelon": {
+    "alt": [],
+    "code": []
+  },
+  "Saint Vincent and the Grenadines": {
+    "alt": [],
+    "code": []
+  },
+  "Samoa": {
+    "alt": [],
+    "code": []
+  },
+  "San Marino": {
+    "alt": [],
+    "code": []
+  },
+  "Sao Tome and Principe": {
+    "alt": [],
+    "code": []
+  },
+  "Saudi Arabia": {
+    "alt": [],
+    "code": ["SA"]
+  },
+  "Scotland": {
+    "alt": [],
+    "code": []
+  },
+  "Senegal": {
+    "alt": [],
+    "code": []
+  },
+  "Serbia": {
+    "alt": [],
+    "code": []
+  },
+  "Seychelles": {
+    "alt": [],
+    "code": []
+  },
+  "Sierra Leone": {
+    "alt": [],
+    "code": []
+  },
+  "Singapore": {
+    "alt": [],
+    "code": []
+  },
+  "Slovakia": {
+    "alt": [],
+    "code": []
+  },
+  "Slovenia": {
+    "alt": [],
+    "code": []
+  },
+  "Solomon Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Somalia": {
+    "alt": [],
+    "code": []
+  },
+  "South Africa": {
+    "alt": [],
+    "code": []
+  },
+  "South Georgia and the South Sandwich Islands": {
+    "alt": [],
+    "code": []
+  },
+  "South Korea": {
+    "alt": ["Republic of Korea"],
+    "code": []
+  },
+  "South Sudan": {
+    "alt": [],
+    "code": []
+  },
+  "Spain": {
+    "alt": [],
+    "code": []
+  },
+  "Sri Lanka": {
+    "alt": [],
+    "code": []
+  },
+  "Sudan": {
+    "alt": [],
+    "code": []
+  },
+  "Suriname": {
+    "alt": [],
+    "code": []
+  },
+  "Svalbard and Jan Mayen": {
+    "alt": [],
+    "code": []
+  },
+  "Swaziland": {
+    "alt": [],
+    "code": []
+  },
+  "Sweden": {
+    "alt": [],
+    "code": []
+  },
+  "Switzerland": {
+    "alt": [],
+    "code": []
+  },
+  "Syria": {
+    "alt": [],
+    "code": []
+  },
+  "Taiwan": {
+    "alt": [],
+    "code": []
+  },
+  "Tajikistan": {
+    "alt": [],
+    "code": []
+  },
+  "Tanzania": {
+    "alt": [],
+    "code": []
+  },
+  "Thailand": {
+    "alt": [],
+    "code": []
+  },
+  "Timor-Leste": {
+    "alt": [],
+    "code": []
+  },
+  "Togo": {
+    "alt": [],
+    "code": []
+  },
+  "Tokelau": {
+    "alt": [],
+    "code": []
+  },
+  "Tonga": {
+    "alt": [],
+    "code": []
+  },
+  "Trinidad and Tobago": {
+    "alt": [],
+    "code": []
+  },
+  "Tunisia": {
+    "alt": [],
+    "code": []
+  },
+  "Turkey": {
+    "alt": [],
+    "code": []
+  },
+  "Turkmenistan": {
+    "alt": [],
+    "code": []
+  },
+  "Turks and Caicos Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Tuvalu": {
+    "alt": [],
+    "code": []
+  },
+  "Uganda": {
+    "alt": [],
+    "code": []
+  },
+  "Ukraine": {
+    "alt": [],
+    "code": []
+  },
+  "United Arab Emirates": {
+    "alt": [],
+    "code": []
+  },
+  "United Kingdom": {
+    "alt": [],
+    "code": ["UK"]
+  },
+  "United States of America": {
+    "alt": ["USA"],
+    "code": ["US"]
+  },
+  "United States Minor Outlying Islands": {
+    "alt": [],
+    "code": []
+  },
+  "Uruguay": {
+    "alt": [],
+    "code": []
+  },
+  "Uzbekistan": {
+    "alt": [],
+    "code": []
+  },
+  "Vanuatu": {
+    "alt": [],
+    "code": []
+  },
+  "Venezuela": {
+    "alt": [],
+    "code": []
+  },
+  "Vietnam": {
+    "alt": [],
+    "code": []
+  },
+  "Virgin Islands, British": {
+    "alt": [],
+    "code": []
+  },
+  "Virgin Islands, U.S.": {
+    "alt": [],
+    "code": []
+  },
+  "Wales": {
+    "alt": [],
+    "code": []
+  },
+  "Wallis and Futuna": {
+    "alt": [],
+    "code": []
+  },
+  "Western Sahara": {
+    "alt": [],
+    "code": []
+  },
+  "Yemen": {
+    "alt": [],
+    "code": []
+  },
+  "Zambia": {
+    "alt": [],
+    "code": []
+  },
+  "Zimbabwe": {
+    "alt": [],
+    "code": []
+  }
+}
