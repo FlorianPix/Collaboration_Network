@@ -1,0 +1,52 @@
+= Praktikum Intelligente Systeme
+
+**Protokoll 2. Sitzung** +
+05.11.2021 08:35 - 09:14 +
+Ort: Discord +
+Anwesende: Florian, Karl, Markus, Oliver, Albrecht
+
+## Besprochene Themen
+    1. **Visualisierung**
+        * Leaflet (JavaScript)
+        * Visualisierung mit Breitengrad, Längengrad, Eintrag in Dictionary
+        * Ansprechend, einfach zu bedienen
+        * Allgemeine Zustimmung
+    2. **Geoparsing**
+        * Geotext (Potentielle Städtenamen erkennen) & Nominatim (OpenStreetMap)
+          ** Problem: Homonyme, ignorieren
+        * Ganze Adressen parsen: Wie mit Sonderfällen in der Syntax fertigwerden?
+        * Vorerst für Geotext entschieden, weil Städtenamen etc. bereits implementiert
+    3. **Datenverarbeitung**
+        * Wie sind Kanten zw. Städten zu gewichten?
+        * (Log.) Odds ratios bekannt, deren Einsatzzweck noch nicht verstanden
+    4. **Datenvisualisierung**
+        * Kanten werden benötigt
+        * Plotly
+        * 2D (Kartenprojektion?) oder 3D?
+    5. **Mögliche Problemstellungen (neben Co-occurrences)**
+        * Wie wahrscheinlich, dass eine Stadt an z.B. Krebsforschung weiterarbeiten wird?
+        * Ost gegen West?
+        * Filtern nach Fachbereichen, interessante Unterschiede?
+        * Woran sind Nationen interessiert?
+        * Welche Länder z.B. bei HIV-Forschung Vorreiter? 
+          ** Zu berücksichtigen: Größe des Landes, allgemeiner Anteil an Gesamtpublikationen
+    6. **Konsultation**
+        * Inhaltliche Fragen
+          ** Was genau ist mit „relative optionally log-odds ratios“ gemeint?
+        * Email schreiben
+        * Termin: Nächsten Freitag (12.11.) 08:30
+        * Visualisierung vorbereiten
+    7. **Datenerhebung**
+        * JSON vs. Pickle
+        * Pickling schneller
+        * Kein Problem, große Datenmengen von PubMed zu beziehen
+        * Problem: Wie verhindern, dass gleiche Einträge mehrmals heruntergeladen werden?
+    8. **Aufgabenverteilung**
+       
+## Aufgaben bis zum nächsten Treffen
+    1. Visualisierung: Florian
+    2. Netzwerk, Aufbereitung: Oliver
+    3. Kontaktaufbau: Karl
+    
+## Nächstes Treffen
+Konsultation 12.11. 08:30
