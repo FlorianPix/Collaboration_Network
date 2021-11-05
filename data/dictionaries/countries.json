@@ -172,7 +172,7 @@
     "code": []
   },
   "China": {
-    "alt": ["P.R. China", "P. R. China"],
+    "alt": ["P.R. China", "P. R. China", "People's Republic of China", "PR China"],
     "code": []
   },
   "Christmas Island": {
@@ -296,7 +296,7 @@
     "code": []
   },
   "France": {
-    "alt": [],
+    "alt": ["Franc"],
     "code": []
   },
   "French Guiana": {
@@ -420,7 +420,7 @@
     "code": []
   },
   "Ireland": {
-    "alt": [],
+    "alt": ["Rep. of Ireland"],
     "code": []
   },
   "Israel": {
@@ -613,7 +613,7 @@
   },
   "Netherlands": {
     "alt": [
-      "The Netherlands"
+      "The Netherlands", "the Netherlands"
     ],
     "code": []
   },
@@ -822,7 +822,7 @@
     "code": []
   },
   "South Korea": {
-    "alt": ["Republic of Korea"],
+    "alt": ["Republic of Korea", "Korea"],
     "code": []
   },
   "South Sudan": {
@@ -830,7 +830,7 @@
     "code": []
   },
   "Spain": {
-    "alt": [],
+    "alt": ["Espana"],
     "code": []
   },
   "Sri Lanka": {
@@ -843,7 +843,7 @@
   },
   "Suriname": {
     "alt": [],
-    "code": []
+    "code": ["NS"]
   },
   "Svalbard and Jan Mayen": {
     "alt": [],
@@ -967,7 +967,7 @@
   },
   "Virgin Islands, British": {
     "alt": [],
-    "code": []
+    "code": ["VI"]
   },
   "Virgin Islands, U.S.": {
     "alt": [],
