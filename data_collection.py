@@ -42,7 +42,7 @@ def save_papers(filename, max_number, search_term="[AD]"):
     # pprint(list(map(lambda p: p['PMID'], papers)))
     with open(f'saved_papers/{filename}', 'wb') as outp:
         pickle.dump(papers, outp, pickle.HIGHEST_PROTOCOL)
-        print(f'saved {len(papers)} papers in saved_papers/{filename}')
+        print(f'saved {len(papers)} papers in data/saved_papers/{filename}')
 
 
 if __name__ == '__main__':

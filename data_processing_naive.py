@@ -4,11 +4,11 @@ from typing import Any, Optional
 from pprint import pprint
 
 def get_countries() -> dict[str, dict[str, list[str]]]:
-    with open('data_collection/countries.json', 'r') as countries_file:
+    with open('data/dictionaries/countries.json', 'r') as countries_file:
         return json.load(countries_file)
 
 def get_saved_papers(filename) -> list[dict[str, Any]]:
-    with open(f'saved_papers/{filename}', 'rb') as papers_file:
+    with open(f'data/saved_papers/{filename}', 'rb') as papers_file:
         return pickle.load(papers_file)
 
 
