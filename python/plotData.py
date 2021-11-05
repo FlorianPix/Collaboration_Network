@@ -3,11 +3,14 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 from shapely.geometry import Point
 from pyproj import CRS
+import json
 
 def plotCities():
     print("Plotting...")
-    df = pd.read_csv("cities.csv")
-    geometry = [Point(float(x[1:-1].split(", ")[1]), float(x[1:-1].split(", ")[0])) for x in df['Coordinates']]
+    with open("data/cities.json", "r") as file:
+        coordinates = json.load(file)
+    df = pd.DataFrame.from_dict(coordinates)
+    geometry = [Point(float(x[1:-1].split(", ")[1]), float(x[1:-1].split(", ")[0])) for x in df[0]]
     crs = CRS('EPSG:4326') # coordinate system
     geo_df = gpd.GeoDataFrame(df, crs=crs, geometry=geometry)
     countries_map = gpd.read_file(gpd.datasets.get_path('naturalearth_lowres'))
