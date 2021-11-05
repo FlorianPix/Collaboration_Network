@@ -244,4 +244,4 @@ fabric.properties
 .history/
 
 # saved_papers
-saved_papers/*
+data/saved_papers
