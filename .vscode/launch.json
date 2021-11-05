@@ -5,28 +5,12 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "data collection",
+            "name": "data processing geopy",
             "type": "python",
             "request": "launch",
-            "program": "${workspaceFolder}/data_collection/data_collection.py",
+            "program": "data_processing_geopy.py",
             "console": "integratedTerminal",
-            "envFile": "${workspaceFolder}/data_collection/.venv"
-        },
-        {
-            "name": "data processing",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/data_collection/data_processing.py",
-            "console": "integratedTerminal",
-            "envFile": "${workspaceFolder}/data_collection/.venv"
-        },
-        {
-            "name": "vis",
-            "type": "python",
-            "request": "launch",
-            "program": "${workspaceFolder}/vis/vis.py",
-            "console": "integratedTerminal",
-            "envFile": "${workspaceFolder}/vis/.venv"
-        },
+            "preLaunchTask": "working_dir"
+        }
     ]
 }
