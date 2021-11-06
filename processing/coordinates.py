@@ -6,6 +6,7 @@ from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
 from .model import Location, Coordinates, Paper
+from .util import progressbar
 
 
 __user_agent = f"user_me_{randint(10000, 99999)}"
@@ -35,10 +36,7 @@ def get_city_coords(location: Location) -> Optional[Coordinates]:
 def calculate_paper_coordinates(papers: list[Paper]) -> dict[Location, Optional[Coordinates]]:
     """calculate dictionary containing coordinates of locations"""
     result: dict[Location, Optional[Coordinates]] = {}
-    index = 0
-    for paper in papers:
-        print(index)
-        index += 1
+    for paper in progressbar(papers, "fetching coordinates: "):
         for location in paper.locations:
             if location not in result:
                 result[location] = get_city_coords(location)
