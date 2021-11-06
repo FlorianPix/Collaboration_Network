@@ -54,4 +54,4 @@ def data_preparation(number_of_papers):
     io.save_coords_pickle(coordinates, f"coordinates{suffix}.pkl")
 
 if __name__ == '__main__':
-    data_preparation(10000) # fetch 10000 papers
+    data_preparation(500) # fetch 500 papers
