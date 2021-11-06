@@ -8,7 +8,7 @@
             "name": "data processing geopy",
             "type": "python",
             "request": "launch",
-            "program": "data_processing_geopy.py",
+            "program": "main.py",
             "console": "integratedTerminal",
             "preLaunchTask": "working_dir"
         }
