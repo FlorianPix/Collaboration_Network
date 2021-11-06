@@ -59,11 +59,11 @@ def get_papers_with_locations(papers: list[dict[str, Any]]) -> list[Paper]:
     """return list of papers containing list of locations"""
     result: list[Paper] = []
     for paper in papers:
-        if 'AD' in paper:
+        if 'AD' in paper and 'PMID' in paper:
             locations = []
             for affiliation in paper['AD']:
                 location = get_location_naive(affiliation)
                 if location is not None:
                     locations.append(location)
-            result.append(Paper(locations))
+            result.append(Paper(int(paper['PMID']), locations))
     return result

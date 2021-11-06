@@ -40,9 +40,9 @@ def get_papers(my_query, max_papers) -> list[dict[str, Any]]:
 def save_papers(filename, max_number, search_term="[AD]"):
     papers = get_papers(search_term, max_number)
     # pprint(list(map(lambda p: p['PMID'], papers)))
-    with open(f'saved_papers/{filename}', 'wb') as outp:
+    with open(f'papers/{filename}', 'wb') as outp:
         pickle.dump(papers, outp, pickle.HIGHEST_PROTOCOL)
-        print(f'saved {len(papers)} papers in data/saved_papers/{filename}')
+        print(f'saved {len(papers)} papers in data/papers/{filename}')
 
 
 if __name__ == '__main__':

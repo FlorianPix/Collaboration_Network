@@ -1,7 +1,7 @@
 import time
-from processing.extraction import Location, get_location_geograpy, get_location_geotext, get_location_naive, get_papers_with_locations
+from processing.extraction import get_location_naive, get_papers_with_locations
 from processing.paper_reading import get_papers_pickle
-from processing.coordinates import get_coords
+from processing.coordinates import get_location_coordinates
 
 
 def test_fail_rate(affiliation_list: list[str]):
@@ -20,8 +20,8 @@ def test_fail_rate(affiliation_list: list[str]):
 papers = get_papers_pickle("papers010000.pkl")
 print(f"number of papers: {len(papers)}")
 
-time1 = time.time()
 papers = get_papers_with_locations(papers)
+time1 = time.time()
+coords = get_location_coordinates(papers)
+with open("data/")
 print(time.time() - time1)
-print(f"number of papers: {len(papers)}")
-
