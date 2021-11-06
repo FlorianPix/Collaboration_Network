@@ -9,7 +9,6 @@ from .model import Location, Paper
 
 __countries = json.load(open("data/dictionaries/countries.json", 'rb'))
 
-
 def __extract_country(affiliation: list[str]) -> Optional[str]:
     target = affiliation[-1].strip()
     for country in __countries:
@@ -26,6 +25,7 @@ def __extract_country(affiliation: list[str]) -> Optional[str]:
     ## print(f"Unknown country: '{target}'")
     return None
 
+# there's a lot of room for optimization here
 def get_location_naive(text: str) -> Optional[Location]:
     """extract location using naive parsing"""
     if text.endswith('.'):
@@ -41,6 +41,11 @@ def get_location_naive(text: str) -> Optional[Location]:
     city = parts[-2].strip()
     return Location(city, None, country)
 
+# this is extremely slow and does not work very well either;
+# need to run `geograpy-nltk` in order for it to work;
+# if it still does not work,
+# save locations.db database from https://github.com/somnathrakshit/geograpy3/wiki
+# in ~/.geograpy3
 def get_location_geograpy(text: str) -> Optional[Location]:
     """extract location using geograpy"""
     places = geograpy.get_geoPlace_context(text=text)
@@ -49,6 +54,7 @@ def get_location_geograpy(text: str) -> Optional[Location]:
     region = places.regions[0] if places.regions else None
     return Location(places.cities[0], region, places.countries[0])
 
+# this is faster than geograpy but it still does not work very well
 def get_location_geotext(text: str) -> Optional[Location]:
     """extract location using geotext"""
     places = geotext.GeoText(text)

@@ -1,4 +1,4 @@
-
+"""network functions"""
 from typing import Optional
 import itertools
 import networkx as nx
