@@ -4,16 +4,16 @@ from typing import Optional
 from geopy.geocoders import Nominatim
 from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
-from .model import Location, Coordinates
+from .model import Location, Coordinates, Paper
 
 
 __user_agent = f"user_me_{randint(10000, 99999)}"
 __geolocator = Nominatim(user_agent=__user_agent)
 __SLEEP_SECONDS = 1
 
-
+# source: https://stackoverflow.com/a/60088688
 def get_coords(location: Location) -> Optional[Coordinates]:
-    """get coords from location"""
+    """get coords from location utilizing the Nominatim api"""
     search = {
         'city': location.city,
         'country': location.country,
@@ -32,10 +32,14 @@ def get_coords(location: Location) -> Optional[Coordinates]:
         return None
 
 
-def get_location_coordinates(locations: list[Location]) -> dict[Location, Optional[Coordinates]]:
+def get_location_coordinates(papers: list[Paper]) -> dict[Location, Optional[Coordinates]]:
     """calculate dictionary containing coordinates of locations"""
     result: dict[Location, Coordinates] = {}
-    for location in locations:
-        if location not in result:
-            result[location] = get_coords(location)
+    index = 0
+    for paper in papers:
+        print(index)
+        index += 1
+        for location in paper.locations:
+            if location not in result:
+                result[location] = get_coords(location)
     return result
