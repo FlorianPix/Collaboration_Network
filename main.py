@@ -1,4 +1,3 @@
-import time
 
 import file_io as io
 from processing.extraction import get_papers_with_locations
@@ -14,10 +13,5 @@ coords = io.get_coords_pickle("coordinates500.pkl")
 # build a graph with locations (containing a city and country, respectively);
 # this graph will have the number of co-occurrences in papers as edge weights
 graph = n.build_city_graph(papers, coords)
-
-"""
-for location in graph.nodes:
-    print(location, coords[location])
-"""
 
 vis(coords, graph.nodes, graph.edges)

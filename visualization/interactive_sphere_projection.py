@@ -57,11 +57,11 @@ def vis(coords, locations, connections):
         )
 
     fig.update_layout(
-        title_text='Feb. 2011 American Airline flight paths<br>(Hover for airport names)',
+        title_text='Co-occurring cites in publication affiliations',
         showlegend=False,
         geo=dict(
             scope='world',
-            projection_type='azimuthal equal area',
+            projection_type='orthographic',
             showland=True,
             landcolor='rgb(243, 243, 243)',
             countrycolor='rgb(204, 204, 204)',
