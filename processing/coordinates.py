@@ -12,8 +12,8 @@ __geolocator = Nominatim(user_agent=__user_agent)
 __SLEEP_SECONDS = 1
 
 # source: https://stackoverflow.com/a/60088688
-def get_coords(location: Location) -> Optional[Coordinates]:
-    """get coords from location utilizing the Nominatim api"""
+def get_city_coords(location: Location) -> Optional[Coordinates]:
+    """get coords of location utilizing the Nominatim api"""
     search = {
         'city': location.city,
         'country': location.country,
@@ -26,20 +26,19 @@ def get_coords(location: Location) -> Optional[Coordinates]:
     except GeocoderTimedOut:
         print('TIMED OUT: GeocoderTimedOut: Retrying...')
         sleep(randint(1*100, __SLEEP_SECONDS*100)/100)
-        return get_coords(location)
+        return get_city_coords(location)
     except GeocoderServiceError as error:
         print('CONNECTION REFUSED: GeocoderServiceError encountered.', error)
         return None
 
-
-def get_location_coordinates(papers: list[Paper]) -> dict[Location, Optional[Coordinates]]:
+def calculate_paper_coordinates(papers: list[Paper]) -> dict[Location, Optional[Coordinates]]:
     """calculate dictionary containing coordinates of locations"""
-    result: dict[Location, Coordinates] = {}
+    result: dict[Location, Optional[Coordinates]] = {}
     index = 0
     for paper in papers:
         print(index)
         index += 1
         for location in paper.locations:
             if location not in result:
-                result[location] = get_coords(location)
+                result[location] = get_city_coords(location)
     return result
