@@ -1,5 +1,6 @@
 """Extract location data out of string"""
 from typing import Any, Optional
+import time
 import json
 import geograpy
 import geotext
@@ -14,12 +15,12 @@ def __extract_country(affiliation: list[str]) -> Optional[str]:
     for country in __countries:
         if country.startswith(target) or target.startswith(country):
             return country
-    for country, alt_dict in __countries.items():
-        for alt in alt_dict["alt"]:
+    for country, data in __countries.items():
+        for alt in data["alt"]:
             if alt.startswith(target) or target.startswith(alt):
                 return country
-    for country, alt_dict in __countries.items():
-        code = alt_dict["code"]
+    for country, data in __countries.items():
+        code = data["code"]
         if target.startswith(code) or target.endswith(code):
             return country
     ## print(f"Unknown country: '{target}'")
@@ -67,3 +68,16 @@ def get_papers_with_locations(papers: list[dict[str, Any]]) -> list[Paper]:
                     locations.append(location)
             result.append(Paper(int(paper['PMID']), locations))
     return result
+
+def test_fail_rate(affiliation_list: list[str]):
+    """Print fail rate"""
+    fail_counter = 0
+    time1 = time.time()
+    for affil in affiliation_list:
+        # if get_location_geograpy(affiliation) is None:
+        # if get_location_geotext(affiliation) is None:
+        if get_location_naive(affil) is None:
+            fail_counter += 1
+    print(time.time() - time1)
+    print(f"number of affiliations: {len(affiliation_list)}, "\
+        f"fails: {fail_counter}, ratio: {fail_counter / len(affiliation_list)}")
