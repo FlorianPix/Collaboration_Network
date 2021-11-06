@@ -14,7 +14,6 @@ class Location:
 @dataclass(frozen=True, unsafe_hash=True)
 class Coordinates:
     """Coordinates represented by latitude and longitude (float values)"""
-
     lat: float
     long: float
 
@@ -22,6 +21,5 @@ class Coordinates:
 @dataclass(frozen=True, unsafe_hash=True)
 class Paper:
     """Class representing paper"""
-
     pmid: int
     locations: list[Location]
