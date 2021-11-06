@@ -19,9 +19,9 @@ def __extract_country(affiliation: list[str]) -> Optional[str]:
             if alt.startswith(target) or target.startswith(alt):
                 return country
     for country, alt_dict in __countries.items():
-        for code in alt_dict["code"]:
-            if target.startswith(code) or target.endswith(code):
-                return country
+        code = alt_dict["code"]
+        if target.startswith(code) or target.endswith(code):
+            return country
     ## print(f"Unknown country: '{target}'")
     return None
 
