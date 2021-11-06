@@ -1,6 +1,6 @@
 
 import pickle
-from typing import Any
+from typing import Any, Optional
 
 from processing.model import Coordinates, Location
 
@@ -14,12 +14,12 @@ def get_papers_pickle(filename: str) -> dict[str, Any]:
     with open(f"data/papers/{filename}", 'rb') as papers_file:
         return pickle.load(papers_file)
 
-def save_coords_pickle(coords: dict[Location, Coordinates], filename: str):
+def save_coords_pickle(coords: dict[Location, Optional[Coordinates]], filename: str):
     """save coordinates (dict with locations as keys) to file in folder data/coordinates"""
     with open(f"data/coordinates/{filename}", 'wb') as coords_file:
         pickle.dump(coords, coords_file, pickle.HIGHEST_PROTOCOL)
 
-def get_coords_pickle(filename: str) -> dict[Location, Coordinates]:
+def get_coords_pickle(filename: str) -> dict[Location, Optional[Coordinates]]:
     """retrieve coordinates (dict with locations as keys) from file in folder data/coordinates"""
     with open(f"data/coordinates/{filename}", 'rb') as coords_file:
         return pickle.load(coords_file)
