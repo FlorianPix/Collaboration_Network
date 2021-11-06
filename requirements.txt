@@ -32,6 +32,7 @@ lxml==4.6.4
 MarkupSafe==2.0.1
 mccabe==0.6.1
 mygene==3.2.2
+networkx==2.6.3
 newspaper3k==0.2.8
 nltk==3.6.5
 numpy==1.21.4
