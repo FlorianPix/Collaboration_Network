@@ -1,7 +1,9 @@
 
-from io import save_papers_pickle
 from typing import Any
 from Bio import Entrez, Medline
+import file_io as io
+from processing.extraction import get_papers_with_locations
+from processing.coordinates import calculate_paper_coordinates
 
 
 EFETCH_MAX = 10000
@@ -36,7 +38,20 @@ def get_papers(query, max_papers) -> list[dict[str, Any]]:
     print(f"number of papers: {len(result)}")
     return result
 
+def data_preparation(number_of_papers):
+    """fetch papers and calculate coordinates; this can take very long :)"""
+    suffix = str(number_of_papers)
+    # get paper dictionaries from PubMed
+    paper_dicts = get_papers("[AD]", number_of_papers)
+    # save papers in `data/papers`
+    io.save_papers_pickle(paper_dicts, f"papers{suffix}.pkl")
+    # get actual paper objects with locations (containing city, maybe a state and country)
+    papers_objs = get_papers_with_locations(paper_dicts)
+    print("starting to fetch location coordinates")
+    # fetch location coordinates from Nominatim API (this will take some time)
+    coordinates = calculate_paper_coordinates(papers_objs)
+    # save coordinates in `data/coordinates`
+    io.save_coords_pickle(coordinates, f"coordinates{suffix}.pkl")
 
 if __name__ == '__main__':
-    papers = get_papers("[AD]", None)
-    save_papers_pickle(papers, "papers.pkl")
+    data_preparation(10000) # fetch 10000 papers
