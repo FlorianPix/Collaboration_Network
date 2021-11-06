@@ -1,19 +1,10 @@
 """Extract location data out of string"""
-from typing import Optional
+from typing import Any, Optional
 import json
 import geograpy
 import geotext
 
-
-class Location:
-    """Class containing a city, a country and optionally a region"""
-    def __init__(self, city: str, region: Optional[str], country: str):
-        self.city: str = city
-        self.region: Optional[str] = region
-        self.country: str = country
-
-    def __repr__(self) -> str:
-        return f"Location({self.city}, {self.region}, {self.country})"
+from .model import Location, Paper
 
 __countries = json.load(open("data/dictionaries/countries.json", 'rb'))
 
@@ -63,3 +54,16 @@ def get_location_geotext(text: str) -> Optional[Location]:
     if not places.countries or not places.cities:
         return None
     return Location(places.cities[0], None, places.countries[0])
+
+def get_papers_with_locations(papers: list[dict[str, Any]]) -> list[Paper]:
+    """return list of papers containing list of locations"""
+    result: list[Paper] = []
+    for paper in papers:
+        if 'AD' in paper:
+            locations = []
+            for affiliation in paper['AD']:
+                location = get_location_naive(affiliation)
+                if location is not None:
+                    locations.append(location)
+            result.append(Paper(locations))
+    return result
