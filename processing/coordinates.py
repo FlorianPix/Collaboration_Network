@@ -1,3 +1,4 @@
+"""fetching and dealing with coordinates"""
 from time import sleep
 from random import randint
 from typing import Optional

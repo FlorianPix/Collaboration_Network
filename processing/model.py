@@ -1,4 +1,4 @@
-
+"""data classes for model entities"""
 from typing import Optional
 from dataclasses import dataclass
 
