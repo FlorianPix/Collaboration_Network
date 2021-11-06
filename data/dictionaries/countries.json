@@ -372,10 +372,6 @@
         "lat": 18.735693,
         "long": -70.162651
     },
-    "East Timor": {
-        "alt": [],
-        "code": []
-    },
     "Ecuador": {
         "alt": [],
         "code": "EC",
@@ -387,10 +383,6 @@
         "code": "EG",
         "lat": 26.820553,
         "long": 30.802498
-    },
-    "England": {
-        "alt": [],
-        "code": []
     },
     "El Salvador": {
         "alt": [],
@@ -1009,10 +1001,6 @@
         "lat": 40.339852,
         "long": 127.510093
     },
-    "Northern Ireland": {
-        "alt": [],
-        "code": []
-    },
     "Northern Mariana Islands": {
         "alt": [],
         "code": "MP",
@@ -1195,10 +1183,6 @@
         "lat": 23.885942,
         "long": 45.079162
     },
-    "Scotland": {
-        "alt": [],
-        "code": []
-    },
     "Senegal": {
         "alt": [],
         "code": "SN",
@@ -1276,7 +1260,9 @@
     },
     "South Sudan": {
         "alt": [],
-        "code": []
+        "code": "SS",
+        "lat": 7.324734,
+        "long": 30.439099
     },
     "Spain": {
         "alt": [
@@ -1295,8 +1281,8 @@
     "Sudan": {
         "alt": [],
         "code": "SD",
-        "lat": 12.862807,
-        "long": 30.217636
+        "lat": 16.339624,
+        "long": 30.401187
     },
     "Suriname": {
         "alt": [],
@@ -1358,8 +1344,8 @@
         "lat": 15.870032,
         "long": 100.992541
     },
-    "Timor-Leste": {
-        "alt": [],
+    "East Timor": {
+        "alt": ["Timor-Leste"],
         "code": "TL",
         "lat": -8.874217,
         "long": 125.727539
@@ -1437,7 +1423,7 @@
         "long": 53.847818
     },
     "United Kingdom": {
-        "alt": [],
+        "alt": ["UK"],
         "code": "GB",
         "lat": 55.378051,
         "long": -3.435973
@@ -1498,10 +1484,6 @@
         "code": "VI",
         "lat": 18.335765,
         "long": -64.896335
-    },
-    "Wales": {
-        "alt": [],
-        "code": []
     },
     "Wallis and Futuna": {
         "alt": [],
