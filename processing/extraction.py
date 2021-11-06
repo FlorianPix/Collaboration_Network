@@ -6,6 +6,7 @@ import geograpy
 import geotext
 
 from .model import Location, Paper
+from .util import progressbar
 
 __countries = json.load(open("data/dictionaries/countries.json", 'rb'))
 
@@ -65,7 +66,7 @@ def get_location_geotext(text: str) -> Optional[Location]:
 def get_papers_with_locations(papers: list[dict[str, Any]]) -> list[Paper]:
     """return list of papers containing list of locations"""
     result: list[Paper] = []
-    for paper in papers:
+    for paper in progressbar(papers, "extracting locations: "):
         if 'AD' in paper and 'PMID' in paper:
             locations = []
             for affiliation in paper['AD']:

@@ -1,2 +1,2 @@
 
-__all__ = ["coordinates", "extraction", "model", "network"]
+__all__ = ["coordinates", "extraction", "model", "network", "util"]

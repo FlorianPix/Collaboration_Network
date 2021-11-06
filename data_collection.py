@@ -4,9 +4,10 @@ from Bio import Entrez, Medline
 import file_io as io
 from processing.extraction import get_papers_with_locations
 from processing.coordinates import calculate_paper_coordinates
+from processing.util import progressbar
 
 
-EFETCH_MAX = 10000
+EFETCH_MAX = 1000
 
 
 def get_papers(query, max_papers) -> list[dict[str, Any]]:
@@ -20,10 +21,10 @@ def get_papers(query, max_papers) -> list[dict[str, Any]]:
     id_list = record["IdList"]
     webenv = record["WebEnv"]
     query_key = record["QueryKey"]
-    print("\nThere are %d records for %s." % (len(id_list), query.strip()))
+    print("\nThere are %d papers for %s." % (len(id_list), query.strip()))
 
     result: list[dict[str, Any]] = []
-    for i in range(0, len(id_list), EFETCH_MAX):
+    for i in progressbar(list(range(0, len(id_list), EFETCH_MAX)), "fetching papers: "):
         records = list(Medline.parse(Entrez.efetch(
             db="pubmed",
             id=id_list,
@@ -33,7 +34,6 @@ def get_papers(query, max_papers) -> list[dict[str, Any]]:
             retmode="text",
             webenv=webenv,
             query_key=query_key)))
-        print(f"i: {i}, length: {len(records)}")
         result += records
     print(f"number of papers: {len(result)}")
     return result
