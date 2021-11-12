@@ -1,0 +1,48 @@
+#Hallo lol#
+
+= Praktikum Intelligente Systeme
+
+**Protokoll 3. Sitzung** +
+12.11.2021 08:35 - 09:16 +
+Ort: Discord +
+Anwesende: Florian, Karl (erste 15 Minuten), Markus, Oliver, Albrecht
+
+## Besprochene Themen
+    1. **Ollis & Florians Code**
+        * Koordinatenermittlung, Visualisierung
+        * Nominatim
+    2. **Inhalt der Email**
+        * Relative Optionally heißt, dass Nutzung von log odds ratios optional ist
+    3. **Datenverarbeitung**
+        * Wo genau kann man Log-odds ratios verwenden
+          ** Anteil z.B. Krebsforschung in Deutscher Forschung vergleichen mit Anteil in Rest der Welt ODER z.B. USA → beides möglich
+          ** Mathematische Formel noch suchen
+        * Balkendiagramm
+    4. **Koordinatenermittlung**
+        * Google Maps/andere API, bereits Liste aller größeren Städte?
+          ** Geonames, **Cities500**
+            *** Auch PLZ-Informationen vorhanden
+            *** Vorerst Favorit
+          ** Wikidata
+            *** Keine Einschränkungen, solange Anfragen <60s dauern
+        * Problem: Syntaxunterschiede, komische Schreibweisen
+          * DSC für string similarity?
+        * Ollis Code:
+          ** Naives Parsen von Text (Albrecht) nicht gut genug
+          ** Komma-Splitting, letzte Elemente enthalten meist gesuchte Informationen
+          ** Könnte noch Erfolgsquote ermitteln
+    5. **Visualisierung**
+        * Plotly langsam bei großen Datensätzen (>500)
+        * Lösungsansatz:
+          ** Traces zusammenfassen (maskieren)
+          ** Erst nach Mindestanzahl von Verbindungen (gemeinsamen Publikationen) Kante berechnen
+       
+## Aufgaben bis zum nächsten Treffen
+    1. Location extraction weiter verbessern (Oliver)
+    2. Datenaufarbeitung, Beziehungen finden (Markus, Albrecht)
+    3. Forschungsthema pro Land (Welche Länder forschen an Krebs, HIV, …) (Karl)
+    4. Daten & Städte visualisieren (Florian)
+    
+## Nächstes Treffen
+Zwischentreffen 19.11. 08:30 +
+Vorauss. richtiges Treffen 26.11.
