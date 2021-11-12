@@ -26,8 +26,9 @@ python main.py # to build graph, run visualization, ...
 
 
 # TODO
-* [ ] improve city visualization
-* [ ] visualize relationships between countries
-* [ ] improve location extraction
-* [ ] make coords fetching faster (maybe google maps API?)
-* [ ] try to find interesting relationships (e. g. per research field)
+* [ ] improve city visualization (Florian)
+* [ ] visualize relationships between countries (Florian)
+* [ ] improve location extraction (Oliver)
+* [ ] make coords fetching faster (persist city coordinates) (Albrecht)
+* [ ] try to find interesting relationships (e. g. per research field) (Markus)
+* [ ] special tasks for Karl (Karl)
