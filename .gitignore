@@ -242,3 +242,7 @@ fabric.properties
 
 # Local History for Visual Studio Code
 .history/
+
+# saved papers
+data/papers
+data/coordinates
