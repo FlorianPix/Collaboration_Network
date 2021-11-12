@@ -18,15 +18,16 @@ python main.py # to build graph, run visualization, ...
 
 ## Questions
 
-* Is it crucial to have great performance? How big should the dataset be?
-* How should be use log odds ratios? What is meant by "relative optionally"?
-* How much accuracy is expected when extracting city names? (Affiliations don't have uniform format.)
+* How should we use log odds ratios? What is meant by "relative optionally"?
+* Concerning "interesting relationships" in the assignment: One idea we had was finding out which countries have a particularly well research in a specific topic. Are we on the right track? Probably that would be a use case for log odds ratios?
+* Is it crucial to have great performance when analyzing the data? How big should the dataset be?
+* How much accuracy is expected when extracting city names? Probably there will always be affiliations where we won't be able to extract a city and country. (Affiliations don't have a uniform format.)
 * (How to fetch **all** papers from PubMed at once?)
 
 
 # TODO
-* [ ] visualization on map
-* [ ] visualization on globe
+* [ ] improve city visualization
+* [ ] visualize relationships between countries
 * [ ] improve location extraction
 * [ ] make coords fetching faster (maybe google maps API?)
-* [ ] try to find interesting relationships (e. g. per field)
+* [ ] try to find interesting relationships (e. g. per research field)
