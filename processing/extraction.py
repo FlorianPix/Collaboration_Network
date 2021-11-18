@@ -10,10 +10,14 @@ __countries = json.load(open("data/dictionaries/countries.json", 'rb'))
 
 def __extract_state(target: str) -> Optional[Tuple[str, str]]: # (state, country)
     for country, data in __countries.items():
-        states = data.get("states", [])
+        states = data.get("states", {})
         for state in states:
             if state.startswith(target) or target.startswith(state):
                 return (state, country)
+        for state, alternatives in states.items():
+            for a in alternatives:
+                if target.startswith(a) or target.endswith(a):
+                    return (state, country)
     return None
 
 
