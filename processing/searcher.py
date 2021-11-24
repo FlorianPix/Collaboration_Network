@@ -14,9 +14,9 @@ class Searcher:
         self.setTopic(topic)
 
     def setCountries(self):
-        for country in self.__countries:
-            country_result = {"total": 0, "found": 0, "code": self.__countries[country]["code"]}
-            self.result[country] = country_result
+            for country in self.__countries:
+                country_result = {"total": 0, "found": 0, "code": self.__countries[country]["code"]}
+                self.result[country] = country_result
 
     def setTopic(self, topic):
         self.topic = topic

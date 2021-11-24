@@ -36,5 +36,5 @@ def getPapers(query, max_papers):
 
 
 if __name__ == '__main__':
-    paper_dicts = getPapers(query="AD", max_papers=20000)
-    io.save_papers_pickle(papers=paper_dicts, filename="papers.pkl")
+    paper_dicts = getPapers(query="AD", max_papers=1000)
+    io.save_papers_pickle(papers=paper_dicts, filename="papers1000.pkl")
