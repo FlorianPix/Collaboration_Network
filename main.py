@@ -1,4 +1,7 @@
+"""unpickle papers and coords, build and visualize graph"""
+
 import file_io as io
+
 from processing.extraction import get_papers_with_locations
 import processing.network as n
 from visualization.interactive_sphere_projection import vis
