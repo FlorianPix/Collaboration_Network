@@ -1,4 +1,3 @@
-
 import file_io as io
 from processing.extraction import get_papers_with_locations
 import processing.network as n
@@ -14,4 +13,4 @@ coords = io.get_coords_pickle("coordinates500.pkl")
 # this graph will have the number of co-occurrences in papers as edge weights
 graph = n.build_city_graph(papers, coords)
 
-vis(coords, graph.nodes, graph.edges)
+vis(coords, graph.nodes, list(filter(lambda x: x[2]["weight"] > 3, graph.edges(data=True))))

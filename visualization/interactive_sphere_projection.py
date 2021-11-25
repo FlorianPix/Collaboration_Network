@@ -33,7 +33,7 @@ def vis(coords, locations, connections):
     end_lats = []
     num_traces = 0
     weights = []
-    for (location_1, location_2, attr) in connections(data=True):
+    for (location_1, location_2, attr) in connections:
         try:
             start_longs.append(coords[location_1].long)
             end_longs.append(coords[location_2].long)
