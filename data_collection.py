@@ -1,4 +1,3 @@
-
 from typing import Any
 from Bio import Entrez, Medline
 import file_io as io
@@ -12,7 +11,7 @@ EFETCH_MAX = 1000
 
 def get_papers(query, max_papers) -> list[dict[str, Any]]:
     """retrieve papers from PupMed"""
-    Entrez.email = "oliver.portee@mailbox.tu-dresden.de"
+    Entrez.email = "johann_albrecht.lange@mailbox.tu-dresden.de"
     record = Entrez.read(Entrez.esearch(
         db="pubmed",
         term=query,
@@ -54,4 +53,4 @@ def data_preparation(number_of_papers):
     io.save_coords_pickle(coordinates, f"coordinates{suffix}.pkl")
 
 if __name__ == '__main__':
-    data_preparation(500) # fetch 500 papers
+    data_preparation(10) # fetch 500 papers
