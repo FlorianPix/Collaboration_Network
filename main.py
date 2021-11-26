@@ -5,11 +5,11 @@ import numpy as np
 
 
 topic = "Alzheimer"
-searcher = Searcher(papers="/home/karlo/Desktop/UNI/9. Semester/AI/IntelligenteSysteme/IntelligenteSystemeProject/Collaboration_Network/data/papers/papers.pkl", countryJson="/home/karlo/Desktop/UNI/9. Semester/AI/IntelligenteSysteme/IntelligenteSystemeProject/Collaboration_Network/data/dictionaries/countries.json", topic=topic)
+searcher = Searcher(papers="./data/papers/papers.pkl", countryJson="./data/dictionaries/countries.json", topic=topic)
 searcher.findTotalResearchPerCountry()
 searcher.findTopicInPapers()
 
-plotter = Plotter(countryPopulation="/home/karlo/Desktop/UNI/9. Semester/AI/IntelligenteSysteme/IntelligenteSystemeProject/Collaboration_Network/data/dictionaries/countryPopulation.json")
+plotter = Plotter(countryPopulation="./data/dictionaries/countryPopulation.json")
 
 plotter.setData(data=searcher.result, topic=topic, paperCount=200000)
 
