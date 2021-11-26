@@ -15,8 +15,8 @@ def __extract_state(target: str) -> Optional[Tuple[str, str]]: # (state, country
             if state.startswith(target) or target.startswith(state):
                 return (state, country)
         for state, alternatives in states.items():
-            for a in alternatives:
-                if target.startswith(a) or target.endswith(a):
+            for alternative in alternatives:
+                if target.startswith(alternative) or target.endswith(alternative):
                     return (state, country)
     return None
 
@@ -39,6 +39,17 @@ def __extract_country(target: str) -> Optional[Tuple[Optional[str], str]]: # (st
     # print(f"Unknown country: '{target}'")
     return None
 
+def __clean_city(target: str) -> Optional[str]:
+    parts = target.split(" ")
+    result = []
+    for part in parts:
+        if not any(char.isdigit() or char == '@' for char in part):
+            result.append(part.strip())
+    result = " ".join(result)
+    if not result:
+        return None
+    return result
+
 # there's a lot of room for optimization here
 def get_location_naive(text: str) -> Optional[Location]:
     """extract location using naive parsing"""
@@ -55,8 +66,17 @@ def get_location_naive(text: str) -> Optional[Location]:
     if result is None:
         return None
     state, country = result
-    city = parts[-2].strip()
-    print(city)
+    city = parts[-2].strip().lower()
+    # in case the second last position contains a state instead of city
+    result = __extract_state(city)
+    if result is not None:
+        state2, country2 = result
+        if country2 == country:
+            city = parts[-3].strip().lower()
+            state = state2
+    city = __clean_city(city)
+    if city is None:
+        return None
     return Location(city, state, country)
 
 # this is extremely slow and does not work very well either;
