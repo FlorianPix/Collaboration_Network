@@ -227,7 +227,19 @@
         "alt": [],
         "code": "ca",
         "lat": 56.130366,
-        "long": -106.346771
+        "long": -106.346771,
+        "states": {
+            "ontario": ["on"],
+            "quebec": ["qc"],
+            "nova scotia": ["ns"],
+            "new brunswick": ["nb"],
+            "manitoba": ["mb"],
+            "british columbia": ["bc"],
+            "prince eward island": ["pe"],
+            "saskatchewan": ["sk"],
+            "alberta": ["ab"],
+            "newfoundland and labrador": ["nl", "labrador", "newfoundland"]
+        }
     },
     "cape verde": {
         "alt": [],
