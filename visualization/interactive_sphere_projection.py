@@ -1,3 +1,5 @@
+from math import sqrt
+
 import plotly.graph_objects as go
 
 
@@ -33,6 +35,7 @@ def vis(coords, locations, connections):
     end_lats = []
     num_traces = 0
     weights = []
+
     for (location_1, location_2, attr) in connections(data=True):
         try:
             start_longs.append(coords[location_1].long)
@@ -43,7 +46,19 @@ def vis(coords, locations, connections):
             num_traces += 1
         except TypeError:
             print(location_1, location_2)
+
     max_weight = max(weights)
+
+    threshold = 0.05
+    for i in range(0, len(weights)).__reversed__():
+        ratio = weights[i] / max_weight
+        if sqrt(ratio) < threshold:
+            del start_longs[i]
+            del start_lats[i]
+            del end_longs[i]
+            del end_lats[i]
+            del weights[i]
+            num_traces -= 1
 
     for i in range(num_traces):
         fig.add_trace(
@@ -52,7 +67,7 @@ def vis(coords, locations, connections):
                 lat=[start_lats[i], end_lats[i]],
                 mode='lines',
                 line=dict(width=1, color='red'),
-                opacity=min(float(weights[i] / max_weight), 1.0)
+                opacity=sqrt(weights[i] / max_weight)
             )
         )
 
@@ -69,3 +84,4 @@ def vis(coords, locations, connections):
     )
 
     fig.show()
+
