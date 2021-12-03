@@ -50,6 +50,22 @@ class Plotter:
                 self.ratioResearch.append(0.0)
                 self.ratioPopulation.append(0.0)
 
+        # convert list to numpy array for better handling
+        ratioPopNp = np.array(self.ratioPopulation)
+
+        # get the minimum value of the array which is non-zero
+        minPopulationRatio = np.min(np.where(ratioPopNp>0,ratioPopNp,np.max(ratioPopNp)))
+
+        # adjust the value space of the ratios to be y>=1 for positive values in log-space
+        ratioPopNp = np.where(ratioPopNp>0,ratioPopNp/minPopulationRatio,1)
+
+        # calculate the values in log10 space (unit: dB)
+        ratioPopLog = 10*np.log10(ratioPopNp)
+
+        # get original data format (list)
+        self.ratioPopulation = ratioPopLog.tolist()
+
+
         self.topic = topic
         self.paperCount = paperCount
 
