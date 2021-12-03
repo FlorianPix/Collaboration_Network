@@ -2,7 +2,7 @@
 import file_io as io
 from processing.extraction import get_papers_with_locations
 import processing.network as n
-from visualization.interactive_sphere_projection import vis
+from visualization.interactive_sphere_projection import vis, vis2
 
 
 # run data_collection.py script once to get the files
@@ -14,4 +14,5 @@ coords = io.get_coords_pickle("coordinates500.pkl")
 # this graph will have the number of co-occurrences in papers as edge weights
 graph = n.build_city_graph(papers, coords)
 
-vis(coords, graph.nodes, graph.edges)
+# vis(coords, graph.nodes, graph.edges) # city wise
+vis2(graph.nodes, graph.edges) # country wise
