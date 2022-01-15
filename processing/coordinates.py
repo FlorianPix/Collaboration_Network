@@ -36,8 +36,16 @@ def get_city_coords(location: Location) -> Optional[Coordinates]:
 def calculate_paper_coordinates(papers: list[Paper]) -> dict[Location, Optional[Coordinates]]:
     """calculate dictionary containing coordinates of locations"""
     result: dict[Location, Optional[Coordinates]] = {}
+    location_count = 0
+    fail_count = 0
     for paper in progressbar(papers, "fetching coordinates: "):
         for location in paper.locations:
+            location_count += 1
             if location not in result:
-                result[location] = get_city_coords(location)
+                tmp = get_city_coords(location)
+                if tmp is None:
+                    fail_count += 1
+                result[location] = tmp
+    if location_count > 0:
+        print(f"Coords fail rate: {round(fail_count / location_count * 100, 2)}% (failed: {fail_count}, total: {location_count})")
     return result

@@ -66,14 +66,21 @@ def get_location_geotext(text: str) -> Optional[Location]:
 def get_papers_with_locations(papers: list[dict[str, Any]]) -> list[Paper]:
     """return list of papers containing list of locations"""
     result: list[Paper] = []
+    fail_count = 0
+    affiliation_count = 0
     for paper in progressbar(papers, "extracting locations: "):
         if 'AD' in paper and 'PMID' in paper:
             locations = []
             for affiliation in paper['AD']:
+                affiliation_count += 1
                 location = get_location_naive(affiliation)
                 if location is not None:
                     locations.append(location)
+                else:
+                    fail_count += 1
             result.append(Paper(int(paper['PMID']), locations))
+    if affiliation_count > 0:
+        print(f"Extraction fail rate: {round(fail_count / affiliation_count * 100, 2)}% (failed: {fail_count}, total: {affiliation_count})")
     return result
 
 def test_fail_rate(affiliation_list: list[str]):
