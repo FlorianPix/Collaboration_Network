@@ -169,7 +169,7 @@ def vis2(locations, connections):
             )
 
         fig.update_layout(
-            title_text='Co-occurring cites in publication affiliations',
+            title_text='Co-occurring countries in publication affiliations',
             showlegend=False,
             geo=dict(
                 scope='world',
