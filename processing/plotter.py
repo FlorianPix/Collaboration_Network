@@ -125,7 +125,7 @@ class Plotter:
             reversescale=False,
             marker_line_color='darkgray',
             marker_line_width=0.5,
-            colorbar_title='Ratio of public medical research papers to a country\'s population',
+            colorbar_title='Ratio of public medical research papers to a country\'s population [dB]',
         ))
         researchRatioMap.update_layout(
             title_text='Map, showing which countries do a lot of medical research wrt to population of the country',
