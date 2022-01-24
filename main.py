@@ -1,7 +1,15 @@
 from processing.searcher import Searcher
 from processing.plotter import Plotter
-import plotly.graph_objects as go
-import numpy as np
+
+"""
+Main:
+- creates objects of searcher and plotter and executes their functionalities
+- the script searches for papers on "Alzheimer" and "cancer" and plots the ratio of found papers on the specified topic
+ in regards to the total amount of research per country
+- the script also searches for the total amount of papers published in an country and plots the ratio of the
+ found papers in regards to the total population of the country.
+
+"""
 
 paperCount = 250000
 topic = "Alzheimer"

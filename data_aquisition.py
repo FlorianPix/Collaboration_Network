@@ -4,6 +4,10 @@ import file_io as io
 
 EFETCH_MAX = 1000
 
+"""
+DataAquisition
+Downloads the number of specified papers into a pickle-file. 
+"""
 
 def getPapers(query, max_papers):
     """retrieve papers from PupMed"""

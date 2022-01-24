@@ -2,7 +2,11 @@ import json
 import file_io as io
 from processing.locator import Locator
 
-
+"""
+Searcher:
+Init:
+coutnryJson: Json, which contains the
+"""
 class Searcher:
     def __init__(self, countryJson, papers, topic: str):
         self.__countries = json.load(open(countryJson, 'rb'))

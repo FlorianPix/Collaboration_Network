@@ -1,5 +1,10 @@
 import pickle
-from typing import Any, Optional
+
+"""
+Pickle-file processing:
+- saves the downloaded papers into a pickle-file
+- load the saved papers from a pickle-file
+"""
 
 
 def save_papers_pickle(papers, filename: str):
