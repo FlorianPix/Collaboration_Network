@@ -1,10 +1,10 @@
+import json
 from math import sqrt
 
 import plotly.graph_objects as go
-import json
 
 
-def vis(coords, locations, connections):
+def vis(coords, locations, connections, title_text='Co-occurring cites in publication affiliations'):
     fig = go.Figure()
 
     longitudes = []
@@ -73,7 +73,7 @@ def vis(coords, locations, connections):
         )
 
     fig.update_layout(
-        title_text='Co-occurring cites in publication affiliations',
+        title_text=title_text,
         showlegend=False,
         geo=dict(
             scope='world',

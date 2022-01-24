@@ -1,13 +1,14 @@
 """fetching and dealing with coordinates"""
-from time import sleep
 from random import randint
+from time import sleep
 from typing import Optional
+
+from file_io import get_coords_pickle, save_coords_pickle
+from geopy.exc import GeocoderServiceError, GeocoderTimedOut
 from geopy.geocoders import Nominatim
-from geopy.exc import GeocoderTimedOut, GeocoderServiceError
 
-from .model import Location, Coordinates, Paper
+from .model import Coordinates, Location, Paper
 from .util import progressbar
-
 
 __user_agent = f"user_me_{randint(10000, 99999)}"
 __geolocator = Nominatim(user_agent=__user_agent)
@@ -38,14 +39,23 @@ def calculate_paper_coordinates(papers: list[Paper]) -> dict[Location, Optional[
     result: dict[Location, Optional[Coordinates]] = {}
     location_count = 0
     fail_count = 0
+    try:
+        known_coordinates = get_coords_pickle("coordinates.pkl")
+    except FileNotFoundError:
+        known_coordinates = {}
     for paper in progressbar(papers, "fetching coordinates: "):
         for location in paper.locations:
             location_count += 1
             if location not in result:
-                tmp = get_city_coords(location)
-                if tmp is None:
-                    fail_count += 1
-                result[location] = tmp
+                if location in known_coordinates:
+                    result[location] = known_coordinates[location]
+                else:
+                    tmp = get_city_coords(location)
+                    if tmp is None:
+                        fail_count += 1
+                    result[location] = tmp
+                    known_coordinates[location] = tmp
     if location_count > 0:
         print(f"Coords fail rate: {round(fail_count / location_count * 100, 2)}% (failed: {fail_count}, total: {location_count})")
+    save_coords_pickle(known_coordinates, "coordinates.pkl")
     return result
