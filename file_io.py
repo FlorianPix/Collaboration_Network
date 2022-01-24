@@ -1,5 +1,4 @@
 import pickle
-
 """
 Pickle-file processing:
 - saves the downloaded papers into a pickle-file
