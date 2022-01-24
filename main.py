@@ -1,16 +1,19 @@
 """unpickle papers and coords, build and visualize graph, analyze data"""
 
-import json, math
+import json
+import math
 
 import file_io as io
-
+from processing import analysis as a
+from processing import network as n
 from processing.extraction import get_papers_with_locations
-from processing import network as n, analysis as a
 from processing.model import Coordinates, Location
 from visualization.interactive_sphere_projection import vis
 
 # run data_collection.py script once to get the files
-DATASET_SIZE = 500
+DATASET_SIZE = 100000
+
+
 papers = get_papers_with_locations(io.get_papers_pickle(f"papers{DATASET_SIZE}.pkl"))
 coords = io.get_coords_pickle(f"coordinates{DATASET_SIZE}.pkl")
 countries = json.load(open("data/dictionaries/countries.json", "rb"))
@@ -24,7 +27,7 @@ city_graph = n.build_city_graph(papers, coords)
 country_graph = n.build_country_graph(papers, coords)
 
 # minimum number of papers a city/country must have published to be incorporated
-THRESHOLD = 0
+THRESHOLD = 20
 log_odds_countrygraph = a.log_odds_countries(country_graph, papers, country_graph.nodes, THRESHOLD)
 log_odds_citygraph = a.log_odds_cities(city_graph, papers, city_graph.nodes, THRESHOLD)
 
@@ -73,6 +76,6 @@ with open(f"outputcities{DATASET_SIZE}_{THRESHOLD}.txt", mode="wt", encoding="ut
 vis(coords, log_odds_countrygraph.nodes, list(filter(lambda x:x[2]["weight"] >= 5, \
     log_odds_countrygraph.edges(data=True))), \
         title_text=f"Log odds ratios of countries, threshold: {THRESHOLD}")
-vis(coords, log_odds_citygraph.nodes, list(filter(lambda x:x[2]["weight"] >= 7, \
+vis(coords, log_odds_citygraph.nodes, list(filter(lambda x:x[2]["weight"] >= 9, \
     log_odds_citygraph.edges(data=True))), \
         title_text=f"Log odds ratios of cities, threshold: {THRESHOLD}")
