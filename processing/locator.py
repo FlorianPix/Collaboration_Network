@@ -1,6 +1,10 @@
 from typing import Any, Optional
 
-
+"""
+Class Locator
+- can extract the location from papers
+- Code by Oliver Portee -> for further comments have a look at his documentation.
+"""
 class Locator:
     def __init__(self, countries):
         self.__countries = countries

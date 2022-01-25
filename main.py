@@ -11,7 +11,9 @@ Main:
 
 """
 
+# Number of papers for plotting
 paperCount = 250000
+#first topic
 topic = "Alzheimer"
 searcher = Searcher(papers="./data/papers/papers250000.pkl", countryJson="./data/dictionaries/countries.json", topic=topic)
 searcher.findTotalResearchPerCountry()
@@ -21,9 +23,11 @@ plotter.setData(data=searcher.result, topic=topic, paperCount=paperCount)
 plotter.plotResearchRatio()
 plotter.plotResearchPopulationRatio()
 
-# new topic:
+# second topic
 topic = "cancer"
+# reset searcher instance:
 searcher.setCountries()
+
 searcher.setTopic(topic=topic)
 searcher.findTotalResearchPerCountry()
 searcher.findTopicInPapers()

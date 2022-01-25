@@ -2,9 +2,17 @@ import json
 import plotly.graph_objects as go
 import numpy as np
 
+"""
+Plotter
+"""
+
 
 class Plotter:
     def __init__(self, countryPopulation):
+        """
+        initialize Plotter class
+        coutnryPopulation: Json, which contains all countries and there population
+        """
         self.__countryPopulation = json.load(open(countryPopulation, 'rb'))
         self.countries = []
         self.founds = []
@@ -26,6 +34,16 @@ class Plotter:
         self.paperCount = 0
 
     def setData(self, data, topic, paperCount):
+        """
+        initialize plotting data :
+        -topic: Research - Topic
+        -total: total number of papers found for that country
+        -found: number of papers found for a specific research topic
+
+        calculate:
+        -ratioResearch: found / total per country
+        -ratioPopulation: total / population per country
+        """
         self.__resetData()
         for country in data:
             self.countries.append(country)
@@ -33,7 +51,6 @@ class Plotter:
             total = data[country]["total"]
             self.founds.append(found)
             self.totals.append(total)
-
 
             if country in self.__countryPopulation:
                 population = self.__countryPopulation[country]["population"]
@@ -45,8 +62,10 @@ class Plotter:
                 if population > 0:
                     self.ratioPopulation.append(round((total / population), ndigits=10))
                 else:
+                    # when there is no known population for this country, the ratio is set to zero
                     self.ratioPopulation.append(0.0)
             else:
+                # otherwise the division by total would be not defined.
                 self.ratioResearch.append(0.0)
                 self.ratioPopulation.append(0.0)
 
@@ -54,22 +73,26 @@ class Plotter:
         ratioPopNp = np.array(self.ratioPopulation)
 
         # get the minimum value of the array which is non-zero
-        minPopulationRatio = np.min(np.where(ratioPopNp>0,ratioPopNp,np.max(ratioPopNp)))
+        minPopulationRatio = np.min(np.where(ratioPopNp > 0, ratioPopNp, np.max(ratioPopNp)))
 
         # adjust the value space of the ratios to be y>=1 for positive values in log-space
-        ratioPopNp = np.where(ratioPopNp>0,ratioPopNp/minPopulationRatio,1)
+        ratioPopNp = np.where(ratioPopNp > 0, ratioPopNp / minPopulationRatio, 1)
 
         # calculate the values in log10 space (unit: dB)
-        ratioPopLog = 10*np.log10(ratioPopNp)
+        ratioPopLog = 10 * np.log10(ratioPopNp)
 
         # get original data format (list)
         self.ratioPopulation = ratioPopLog.tolist()
-
 
         self.topic = topic
         self.paperCount = paperCount
 
     def plotResearchRatio(self):
+        """
+        Plot the Ratio of found papers on a certain topic in regards to the total amount of papers found per country
+        output:
+        - World map as plotly.graph_objects.figure
+        """
         customData = np.empty(shape=(len(self.totals), 3, 1), dtype='object')
         customData[:, 0] = np.array(self.totals).reshape(-1, 1)
         customData[:, 1] = np.array(self.founds).reshape(-1, 1)
@@ -109,6 +132,11 @@ class Plotter:
         researchRatioMap.show()
 
     def plotResearchPopulationRatio(self):
+        """
+        Plot the Ratio of the total amount of papers found divided by the population for each country
+        output:
+        - World map as plotly.graph_objects.figure
+        """
         customData = np.empty(shape=(len(self.totals), 3, 1), dtype='object')
         customData[:, 0] = np.array(self.totals).reshape(-1, 1)
         customData[:, 1] = np.array(self.population).reshape(-1, 1)
@@ -145,5 +173,3 @@ class Plotter:
         )
 
         researchRatioMap.show()
-
-
