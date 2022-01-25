@@ -12,7 +12,7 @@ from visualization.interactive_sphere_projection import vis, vis2
 
 # run data_collection.py script once to get the files
 
-DATASET_SIZE = 100000
+DATASET_SIZE = 500
 papers = get_papers_with_locations(io.get_papers_pickle(f"papers{DATASET_SIZE}.pkl"))
 coords = io.get_coords_pickle(f"coordinates{DATASET_SIZE}.pkl")
 countries = json.load(open("data/dictionaries/countries.json", "rb"))
@@ -25,7 +25,7 @@ for country in countries.items():
 graph = n.build_city_graph(papers, coords)
 country_graph = n.build_country_graph(papers, coords)
 
-# vis(coords, graph.nodes, graph.edges) # city wise
+vis(coords, graph.nodes, graph.edges) # city wise
 vis2(graph.nodes, graph.edges) # country wise
 
 # minimum number of papers a city/country must have published to be incorporated
